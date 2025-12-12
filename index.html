@@ -1,32 +1,84 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Mi GitPage - CV</title>
-  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap" rel="stylesheet">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>CV - Cristian Casa</title>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap" rel="stylesheet" />
   <style>
     * { margin: 0; padding: 0; box-sizing: border-box; }
-    body { font-family: 'Roboto', sans-serif; background: #fafafa; color: #333; line-height: 1.6; }
+    body { font-family: 'Roboto', sans-serif; background: #f4f4f4; color: #333; }
 
-    header { text-align: center; padding: 60px 20px; background: #4f46e5; color: white; }
-    header h1 { font-size: 2.5rem; margin-bottom: 10px; }
-    header p { font-size: 1.2rem; opacity: 0.9; }
-
-    .foto {
-      width: 140px; height: 140px;
-      border-radius: 50%;
-      object-fit: cover;
-      border: 4px solid white;
-      margin-top: -70px;
-      display: block;
-      margin-left: auto; margin-right: auto;
-      box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+    .cv-container {
+      display: flex;
+      max-width: 1100px;
+      margin: 40px auto;
+      background: white;
+      box-shadow: 0 0 10px rgba(0,0,0,0.1);
+      border-radius: 8px;
+      overflow: hidden;
     }
 
-    .container { max-width: 900px; margin: auto; padding: 40px 20px; }
+    .left {
+      width: 35%;
+      background: #4f46e5;
+      color: white;
+      padding: 30px;
+    }
 
-    h2 {
+    .left img {
+      width: 120px;
+      height: 120px;
+      border-radius: 50%;
+      object-fit: cover;
+      border: 3px solid white;
+      margin-bottom: 20px;
+    }
+
+    .left h2 {
+      font-size: 1.5rem;
+      margin-bottom: 10px;
+    }
+
+    .left p {
+      margin-bottom: 20px;
+      font-size: 0.95rem;
+    }
+
+    .section-title {
+      font-weight: bold;
+      margin-top: 30px;
+      margin-bottom: 10px;
+      font-size: 1.1rem;
+      border-bottom: 1px solid rgba(255,255,255,0.3);
+      padding-bottom: 5px;
+    }
+
+    .left ul {
+      list-style: none;
+      padding-left: 0;
+    }
+
+    .left ul li {
+      margin-bottom: 8px;
+    }
+
+    .right {
+      width: 65%;
+      padding: 30px;
+    }
+
+    .right h1 {
+      font-size: 2rem;
+      color: #4f46e5;
+      margin-bottom: 10px;
+    }
+
+    .right section {
+      margin-bottom: 30px;
+    }
+
+    .right h2 {
       font-size: 1.6rem;
       margin-bottom: 15px;
       color: #4f46e5;
@@ -34,149 +86,129 @@
       padding-bottom: 5px;
     }
 
-    .card {
-      background: white;
-      padding: 20px;
-      margin: 20px 0;
-      border-radius: 10px;
-      box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+    .right h3 {
+      font-size: 1.2rem;
+      margin-bottom: 5px;
+      color: #333;
     }
 
-    .cv-list { list-style: none; padding-left: 0; }
-    .cv-list li { margin-bottom: 8px; }
-
-    .repo {
-      background: #f9fafb;
-      padding: 15px;
-      margin: 10px 0;
-      border-radius: 8px;
-      border: 1px solid #e5e7eb;
-      transition: 0.3s;
+    .right p {
+      font-size: 0.95rem;
+      margin-bottom: 10px;
     }
-    .repo:hover { background: #eef2ff; }
-    .repo a { font-weight: bold; color: #4f46e5; text-decoration: none; }
 
-    footer {
-      text-align: center;
-      padding: 20px;
-      background: #4f46e5;
-      color: white;
-      margin-top: 40px;
+    .right ul {
+      padding-left: 20px;
+    }
+
+    .right ul li {
+      margin-bottom: 6px;
+    }
+
+    a {
+      color: #4f46e5;
+      text-decoration: none;
+    }
+
+    a:hover {
+      text-decoration: underline;
     }
   </style>
 </head>
 <body>
 
-  <header>
-    <h1>Mi Curriculum Vitae</h1>
-    <p>Mi GitHub & GitLab Page Personal</p>
-  </header>
+  <div class="cv-container">
+    <!-- Columna izquierda -->
+    <div class="left">
+      <img src="https://scontent.fuio13-1.fna.fbcdn.net/v/t39.30808-6/470208165_1582053935850032_7964918233728307879_n.jpg" alt="Foto de Cristian" />
+      <h2>Cristian Casa</h2>
+      <p>Desarrollador Fullstack</p>
 
-  <img src="https://scontent.fuio13-1.fna.fbcdn.net/v/t39.30808-6/470208165_1582053935850032_7964918233728307879_n.jpg" alt="Mi Foto" class="foto">
+      <div class="section-title">Contacto</div>
+      <ul>
+        <li>📞 +593 987654321</li>
+        <li>📧 cristiancasa94@gmail.com</li>
+        <li>📍 Latacunga, Ecuador</li>
+      </ul>
 
-  <div class="container">
+      <div class="section-title">Habilidades</div>
+      <ul>
+        <li>Python, C#, JavaScript, .NET</li>
+        <li>HTML, CSS, JS</li>
+        <li>MySQL, PostgreSQL, SQL Server</li>
+        <li>Git y GitHub</li>
+        <li>DBeaver, MariaDB</li>
+      </ul>
 
-    <section>
-      <h2>Sobre mí</h2>
-      <div class="card">
-        <p>Soy un desarrollador apasionado por la tecnología y la creación de soluciones digitales.</p>
-        <p>Siempre estoy buscando mejorar mis habilidades y aprender nuevas tecnologías.</p>
-      </div>
-    </section>
+      <div class="section-title">Idiomas</div>
+      <ul>
+        <li>Español: Nativo</li>
+        <li>Inglés: Intermedio</li>
+      </ul>
 
-    <section>
-      <h2>Información Personal</h2>
-      <div class="card">
-        <p><strong>Nombre:</strong> Casa Quinatoa Cristian Gustavo</p>
-        <p><strong>Edad:</strong> 21</p>
-        <p><strong>Correo:</strong> cristiancasa94@gmail.com</p>
-        <p><strong>Ubicación:</strong> Ecuador - Latacunga - Tanicuchi</p>
-      </div>
-    </section>
+      <div class="section-title">Pasatiempos</div>
+      <ul>
+        <li>Programar</li>
+        <li>Escuchar música</li>
+        <li>Explorar nuevas tecnologías</li>
+      </ul>
+    </div>
 
-    <section>
-      <h2>Educación</h2>
-      <div class="card">
-        <ul class="cv-list">
-          <li><strong>Universidad Técnica de Cotopaxi</strong> – Ingeniería en Sistemas de la Información (2025 - Actualidad)</li>
-          <li><strong>Unidad Educativa Marco Aurelio Subía Martínez Batalla de Panupali</strong> – Bachillerato Técnico</li>
-        </ul>
-      </div>
-    </section>
+    <!-- Columna derecha -->
+    <div class="right">
+      <h1>Perfil Profesional</h1>
+      <section>
+        <p>Soy un desarrollador apasionado por la tecnología, con experiencia en desarrollo web, móvil y backend. Me especializo en crear soluciones eficientes, escalables y bien documentadas. Me gusta trabajar en equipo y aprender constantemente.</p>
+      </section>
 
-    <section>
-      <h2>Habilidades</h2>
-      <div class="card">
-        <ul class="cv-list">
-          <li>Programación en Python, C#, JavaScript, .NET</li>
-          <li>Desarrollo web (HTML, CSS, JS)</li>
-          <li>Bases de datos (MySQL, SQL Server, DBeaver, PostgreSQL, MariaDB)</li>
-          <li>Git y GitHub</li>
-          <li>Trabajo en equipo</li>
-        </ul>
-      </div>
-    </section>
-
-    <section>
       <h2>Experiencia</h2>
-      <div class="card">
-        <ul class="cv-list">
-          <li><strong>Proyecto A:</strong> Sistema de facturación (2024)</li>
-          <li><strong>Proyecto B:</strong> Aplicación móvil Flutter (2025)</li>
-          <li><strong>Proyecto C:</strong> Sistema web con Laravel (2025)</li>
+      <section>
+        <h3>Sistema de Facturación (2024)</h3>
+        <ul>
+          <li>Desarrollado con Laravel y MySQL</li>
+          <li>Gestión de clientes, productos y reportes</li>
         </ul>
-      </div>
-    </section>
 
-    <section>
-      <h2>Mis Repositorios de GitHub</h2>
-      <div class="card" id="repos-github">
-        <p>Cargando repositorios de GitHub...</p>
-      </div>
-    </section>
+        <h3>Aplicación Flutter (2025)</h3>
+        <ul>
+          <li>App móvil para reservas y notificaciones</li>
+          <li>Integración con Firebase</li>
+        </ul>
 
-    <section>
-      <h2>Mis Repositorios de GitLab</h2>
-      <div class="card">
-        <div class="repo"><a href="https://gitlab.com/gus_05-group/puntosTuristicos" target="_blank">puntosTuristicos</a><p>Sin descripción</p></div>
-        <div class="repo"><a href="https://gitlab.com/gus_05-group/sen" target="_blank">sen</a><p>Sin descripción</p></div>
-        <div class="repo"><a href="https://gitlab.com/gus_05-group/sensoresLot" target="_blank">sensoresLot</a><p>Sin descripción</p></div>
-        <div class="repo"><a href="https://gitlab.com/gus_05-group/tiendaPedido" target="_blank">tiendaPedido</a><p>Sin descripción</p></div>
-        <div class="repo"><a href="https://gitlab.com/gus_05-group/tiendaPedidos" target="_blank">tiendaPedidos</a><p>Sin descripción</p></div>
-        <div class="repo"><a href="https://gitlab.com/gus_05-group/trabajosCQ1" target="_blank">trabajosCQ1</a><p>Sin descripción</p></div>
-        <div class="repo"><a href="https://gitlab.com/gus_05-group/turismo" target="_blank">turismo</a><p>Sin descripción</p></div>
-        <div class="repo"><a href="https://gitlab.com/gus_05-group/turismos" target="_blank">turismos</a><p>Sin descripción</p></div>
-      </div>
-    </section>
+        <h3>Sistema Web con Laravel (2025)</h3>
+        <ul>
+          <li>Panel administrativo con roles y permisos</li>
+          <li>Diseño responsive y validación de formularios</li>
+        </ul>
+      </section>
 
+      <h2>Educación</h2>
+      <section>
+        <h3>Universidad Técnica de Cotopaxi</h3>
+        <p>Ingeniería en Sistemas de la Información (2025 - Actualidad)</p>
+
+        <h3>Unidad Educativa Marco Aurelio Subía</h3>
+        <p>Bachillerato Técnico</p>
+      </section>
+
+      <h2>Proyectos Destacados</h2>
+      <section>
+        <h3>GitHub</h3>
+        <ul>
+          <li><a href="https://github.com/gustavo-478/gustavo-478.github.io" target="_blank">gustavo-478.github.io</a> – Página personal con CV en HTML y CSS</li>
+        </ul>
+
+        <h3>GitLab</h3>
+        <ul>
+          <li><a href="https://gitlab.com/gus_05-group/puntosTuristicos" target="_blank">puntosTuristicos</a> – Gestión de lugares turísticos</li>
+          <li><a href="https://gitlab.com/gus_05-group/sensoresLot" target="_blank">sensoresLot</a> – Monitoreo ambiental con sensores IoT</li>
+          <li><a href="https://gitlab.com/gus_05-group/tiendaPedidos" target="_blank">tiendaPedidos</a> – Sistema de pedidos en línea</li>
+          <li><a href="https://gitlab.com/gus_05-group/trabajosCQ1" target="_blank">trabajosCQ1</a> – Repositorio académico y técnico</li>
+          <li><a href="https://gitlab.com/gus_05-group/turismo" target="_blank">turismo</a> – Plataforma de promoción turística</li>
+        </ul>
+      </section>
+    </div>
   </div>
-
-  <footer>
-    © 2025 - Mi GitPage
-  </footer>
-
-  <!-- Script para mostrar repos de GitHub -->
-  <script>
-    const githubUser = "gustavo-478";
-
-    fetch(`https://api.github.com/users/${githubUser}/repos`)
-      .then(response => response.json())
-      .then(repos => {
-        const container = document.getElementById("repos-github");
-        container.innerHTML = "";
-        repos.forEach(repo => {
-          container.innerHTML += `
-            <div class="repo">
-              <a href="${repo.html_url}" target="_blank">${repo.name}</a>
-              <p>${repo.description || "Sin descripción"}</p>
-            </div>
-          `;
-        });
-      })
-      .catch(error => {
-        document.getElementById("repos-github").innerHTML = "Error cargando repos de GitHub.";
-      });
-  </script>
 
 </body>
 </html>
