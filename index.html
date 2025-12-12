@@ -94,14 +94,15 @@
 
     <header>
         <h1>Mi Curriculum Vitae</h1>
-        <p>Mi GitHub Page Personal</p>
+        <p>Mi GitHub & GitLab Page Personal</p>
     </header>
 
     <!-- Foto desde la web -->
-    <img src="https://scontent.fuio13-1.fna.fbcdn.net/v/t39.30808-6/470208165_1582053935850032_7964918233728307879_n.jpg?_nc_cat=110&ccb=1-7&_nc_sid=a5f93a&_nc_eui2=AeERSGbqZuLB6ruk00_d224XUY6AawJRs9FRjoBrAlGz0Y3isyzwH12EveobeDLgRmskyUHAMJnIz-_haSW6BSqr&_nc_ohc=oudaHBVvcKIQ7kNvwHuOz2K&_nc_oc=AdkvooWtnuYfm8WoouGe3SzG2e6Glg9HPTwfp9z9VPM9pJtgrZyBAgBHu9LbE_GRUi0&_nc_zt=23&_nc_ht=scontent.fuio13-1.fna&_nc_gid=wSWVha71mKpUFLU7skEEnQ&oh=00_AfkxPxKqPOsdjNKMBHY10fZYdySExF1ltAPelGMrORm44g&oe=6941BE92" alt="Mi Foto" class="foto">
+    <img src="https://scontent.fuio13-1.fna.fbcdn.net/v/t39.30808-6/470208165_1582053935850032_7964918233728307879_n.jpg" alt="Mi Foto" class="foto">
 
     <div class="container">
 
+        <!-- Sobre mí -->
         <section>
             <h2>Sobre mí</h2>
             <div class="card">
@@ -110,6 +111,7 @@
             </div>
         </section>
 
+        <!-- Información Personal -->
         <section>
             <h2>Información Personal</h2>
             <div class="card cv-section">
@@ -120,16 +122,18 @@
             </div>
         </section>
 
+        <!-- Educación -->
         <section>
             <h2>Educación</h2>
             <div class="card">
                 <ul class="cv-list">
-                    <li><strong>Universidad X</strong> – Ingeniería en Sistemas (2025 - Actualidad)</li>
+                    <li><strong>Universidad Técnica de Cotopaxi</strong> – Ingeniería en Sistemas de la Información (2025 - Actualidad)</li>
                     <li><strong>Unidad Educativa Marco Aurelio Subía Martínez Batalla de Panupali</strong> – Bachillerato Técnico</li>
                 </ul>
             </div>
         </section>
 
+        <!-- Habilidades -->
         <section>
             <h2>Habilidades</h2>
             <div class="card">
@@ -143,21 +147,31 @@
             </div>
         </section>
 
+        <!-- Experiencia -->
         <section>
             <h2>Experiencia</h2>
             <div class="card">
                 <ul class="cv-list">
                     <li><strong>Proyecto A:</strong> Sistema de facturación (2024)</li>
-                    <li><strong>Proyecto B:</strong> Aplicación móvil Flutter (2023)</li>
-                    <li><strong>Proyecto C:</strong> Sistema web con Laravel (2022)</li>
+                    <li><strong>Proyecto B:</strong> Aplicación móvil Flutter (2025)</li>
+                    <li><strong>Proyecto C:</strong> Sistema web con Laravel (2025)</li>
                 </ul>
             </div>
         </section>
 
+        <!-- Repositorios GitHub -->
         <section>
-            <h2>Mis Repositorios</h2>
-            <div class="card" id="repos-container">
-                <p>Cargando repositorios...</p>
+            <h2>Mis Repositorios de GitHub</h2>
+            <div class="card" id="repos-github">
+                <p>Cargando repositorios de GitHub...</p>
+            </div>
+        </section>
+
+        <!-- Repositorios GitLab -->
+        <section>
+            <h2>Mis Repositorios de GitLab</h2>
+            <div class="card" id="repos-gitlab">
+                <p>Cargando repositorios de GitLab...</p>
             </div>
         </section>
 
@@ -169,14 +183,15 @@
 
     <!-- Script para mostrar repos -->
     <script>
-        const username = "gustavo-478";
+        const githubUser = "gustavo-478";
+        const gitlabUser = "gustavo-478"; // 👈 cambia esto si tu usuario de GitLab es distinto
 
-        fetch(`https://api.github.com/users/${username}/repos`)
+        // GitHub
+        fetch(`https://api.github.com/users/${githubUser}/repos`)
             .then(response => response.json())
             .then(repos => {
-                const container = document.getElementById("repos-container");
+                const container = document.getElementById("repos-github");
                 container.innerHTML = "";
-
                 repos.forEach(repo => {
                     container.innerHTML += `
                         <div class="repo">
@@ -187,7 +202,26 @@
                 });
             })
             .catch(error => {
-                document.getElementById("repos-container").innerHTML = "Error cargando repos.";
+                document.getElementById("repos-github").innerHTML = "Error cargando repos de GitHub.";
+            });
+
+        // GitLab
+        fetch(`https://gitlab.com/api/v4/users/${gitlabUser}/projects`)
+            .then(response => response.json())
+            .then(projects => {
+                const container = document.getElementById("repos-gitlab");
+                container.innerHTML = "";
+                projects.forEach(project => {
+                    container.innerHTML += `
+                        <div class="repo">
+                            <a href="${project.web_url}" target="_blank">${project.name}</a>
+                            <p>${project.description || "Sin descripción"}</p>
+                        </div>
+                    `;
+                });
+            })
+            .catch(error => {
+                document.getElementById("repos-gitlab").innerHTML = "Error cargando repos de GitLab.";
             });
     </script>
 
