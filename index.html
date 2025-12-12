@@ -1,214 +1,182 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Mi GitPage - CV</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Mi GitPage - CV</title>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap" rel="stylesheet">
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body { font-family: 'Roboto', sans-serif; background: #fafafa; color: #333; line-height: 1.6; }
 
-    <style>
-        body {
-            margin: 0;
-            font-family: Arial, Helvetica, sans-serif;
-            background: #f3f3f3;
-            color: #333;
-        }
+    header { text-align: center; padding: 60px 20px; background: #4f46e5; color: white; }
+    header h1 { font-size: 2.5rem; margin-bottom: 10px; }
+    header p { font-size: 1.2rem; opacity: 0.9; }
 
-        header {
-            text-align: center;
-            padding: 50px 20px;
-            background: linear-gradient(135deg, #3b82f6, #9333ea);
-            color: white;
-        }
+    .foto {
+      width: 140px; height: 140px;
+      border-radius: 50%;
+      object-fit: cover;
+      border: 4px solid white;
+      margin-top: -70px;
+      display: block;
+      margin-left: auto; margin-right: auto;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+    }
 
-        header h1 {
-            font-size: 3rem;
-            margin: 0;
-        }
+    .container { max-width: 900px; margin: auto; padding: 40px 20px; }
 
-        .container {
-            max-width: 900px;
-            margin: auto;
-            padding: 40px 20px;
-        }
+    h2 {
+      font-size: 1.6rem;
+      margin-bottom: 15px;
+      color: #4f46e5;
+      border-bottom: 2px solid #e5e7eb;
+      padding-bottom: 5px;
+    }
 
-        h2 {
-            color: #4f46e5;
-            border-left: 5px solid #4f46e5;
-            padding-left: 10px;
-            font-size: 1.8rem;
-        }
+    .card {
+      background: white;
+      padding: 20px;
+      margin: 20px 0;
+      border-radius: 10px;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+    }
 
-        .card {
-            background: white;
-            padding: 20px;
-            margin: 15px 0;
-            border-radius: 12px;
-            box-shadow: 0 4px 12px #00000022;
-        }
+    .cv-list { list-style: none; padding-left: 0; }
+    .cv-list li { margin-bottom: 8px; }
 
-        .foto {
-            width: 160px;
-            height: 160px;
-            border-radius: 100%;
-            background: #ddd;
-            display: block;
-            margin: auto;
-            margin-top: -80px;
-            border: 5px solid white;
-            object-fit: cover;
-        }
+    .repo {
+      background: #f9fafb;
+      padding: 15px;
+      margin: 10px 0;
+      border-radius: 8px;
+      border: 1px solid #e5e7eb;
+      transition: 0.3s;
+    }
+    .repo:hover { background: #eef2ff; }
+    .repo a { font-weight: bold; color: #4f46e5; text-decoration: none; }
 
-        .cv-section p {
-            margin: 8px 0;
-        }
-
-        .cv-list li {
-            margin-bottom: 6px;
-        }
-
-        .repo {
-            background: #fff;
-            padding: 15px;
-            margin: 10px 0;
-            border-radius: 8px;
-            box-shadow: 0 2px 6px #00000022;
-        }
-
-        .repo a {
-            font-weight: bold;
-            color: #3b82f6;
-            text-decoration: none;
-        }
-
-        footer {
-            text-align: center;
-            padding: 20px;
-            background: #111827;
-            color: white;
-            margin-top: 40px;
-        }
-    </style>
+    footer {
+      text-align: center;
+      padding: 20px;
+      background: #4f46e5;
+      color: white;
+      margin-top: 40px;
+    }
+  </style>
 </head>
-
 <body>
 
-    <header>
-        <h1>Mi Curriculum Vitae</h1>
-        <p>Mi GitHub & GitLab Page Personal</p>
-    </header>
+  <header>
+    <h1>Mi Curriculum Vitae</h1>
+    <p>Mi GitHub & GitLab Page Personal</p>
+  </header>
 
-    <img src="https://scontent.fuio13-1.fna.fbcdn.net/v/t39.30808-6/470208165_1582053935850032_7964918233728307879_n.jpg" alt="Mi Foto" class="foto">
+  <img src="https://scontent.fuio13-1.fna.fbcdn.net/v/t39.30808-6/470208165_1582053935850032_7964918233728307879_n.jpg" alt="Mi Foto" class="foto">
 
-    <div class="container">
+  <div class="container">
 
-        <!-- Sobre mí -->
-        <section>
-            <h2>Sobre mí</h2>
-            <div class="card">
-                <p>Soy un desarrollador apasionado por la tecnología y la creación de soluciones digitales.</p>
-                <p>Siempre estoy buscando mejorar mis habilidades y aprender nuevas tecnologías.</p>
+    <section>
+      <h2>Sobre mí</h2>
+      <div class="card">
+        <p>Soy un desarrollador apasionado por la tecnología y la creación de soluciones digitales.</p>
+        <p>Siempre estoy buscando mejorar mis habilidades y aprender nuevas tecnologías.</p>
+      </div>
+    </section>
+
+    <section>
+      <h2>Información Personal</h2>
+      <div class="card">
+        <p><strong>Nombre:</strong> Casa Quinatoa Cristian Gustavo</p>
+        <p><strong>Edad:</strong> 21</p>
+        <p><strong>Correo:</strong> cristiancasa94@gmail.com</p>
+        <p><strong>Ubicación:</strong> Ecuador - Latacunga - Tanicuchi</p>
+      </div>
+    </section>
+
+    <section>
+      <h2>Educación</h2>
+      <div class="card">
+        <ul class="cv-list">
+          <li><strong>Universidad Técnica de Cotopaxi</strong> – Ingeniería en Sistemas de la Información (2025 - Actualidad)</li>
+          <li><strong>Unidad Educativa Marco Aurelio Subía Martínez Batalla de Panupali</strong> – Bachillerato Técnico</li>
+        </ul>
+      </div>
+    </section>
+
+    <section>
+      <h2>Habilidades</h2>
+      <div class="card">
+        <ul class="cv-list">
+          <li>Programación en Python, C#, JavaScript, .NET</li>
+          <li>Desarrollo web (HTML, CSS, JS)</li>
+          <li>Bases de datos (MySQL, SQL Server, DBeaver, PostgreSQL, MariaDB)</li>
+          <li>Git y GitHub</li>
+          <li>Trabajo en equipo</li>
+        </ul>
+      </div>
+    </section>
+
+    <section>
+      <h2>Experiencia</h2>
+      <div class="card">
+        <ul class="cv-list">
+          <li><strong>Proyecto A:</strong> Sistema de facturación (2024)</li>
+          <li><strong>Proyecto B:</strong> Aplicación móvil Flutter (2025)</li>
+          <li><strong>Proyecto C:</strong> Sistema web con Laravel (2025)</li>
+        </ul>
+      </div>
+    </section>
+
+    <section>
+      <h2>Mis Repositorios de GitHub</h2>
+      <div class="card" id="repos-github">
+        <p>Cargando repositorios de GitHub...</p>
+      </div>
+    </section>
+
+    <section>
+      <h2>Mis Repositorios de GitLab</h2>
+      <div class="card">
+        <div class="repo"><a href="https://gitlab.com/gus_05-group/puntosTuristicos" target="_blank">puntosTuristicos</a><p>Sin descripción</p></div>
+        <div class="repo"><a href="https://gitlab.com/gus_05-group/sen" target="_blank">sen</a><p>Sin descripción</p></div>
+        <div class="repo"><a href="https://gitlab.com/gus_05-group/sensoresLot" target="_blank">sensoresLot</a><p>Sin descripción</p></div>
+        <div class="repo"><a href="https://gitlab.com/gus_05-group/tiendaPedido" target="_blank">tiendaPedido</a><p>Sin descripción</p></div>
+        <div class="repo"><a href="https://gitlab.com/gus_05-group/tiendaPedidos" target="_blank">tiendaPedidos</a><p>Sin descripción</p></div>
+        <div class="repo"><a href="https://gitlab.com/gus_05-group/trabajosCQ1" target="_blank">trabajosCQ1</a><p>Sin descripción</p></div>
+        <div class="repo"><a href="https://gitlab.com/gus_05-group/turismo" target="_blank">turismo</a><p>Sin descripción</p></div>
+        <div class="repo"><a href="https://gitlab.com/gus_05-group/turismos" target="_blank">turismos</a><p>Sin descripción</p></div>
+      </div>
+    </section>
+
+  </div>
+
+  <footer>
+    © 2025 - Mi GitPage
+  </footer>
+
+  <!-- Script para mostrar repos de GitHub -->
+  <script>
+    const githubUser = "gustavo-478";
+
+    fetch(`https://api.github.com/users/${githubUser}/repos`)
+      .then(response => response.json())
+      .then(repos => {
+        const container = document.getElementById("repos-github");
+        container.innerHTML = "";
+        repos.forEach(repo => {
+          container.innerHTML += `
+            <div class="repo">
+              <a href="${repo.html_url}" target="_blank">${repo.name}</a>
+              <p>${repo.description || "Sin descripción"}</p>
             </div>
-        </section>
-
-        <!-- Información Personal -->
-        <section>
-            <h2>Información Personal</h2>
-            <div class="card cv-section">
-                <p><strong>Nombre:</strong> Casa Quinatoa Cristian Gustavo</p>
-                <p><strong>Edad:</strong> 21</p>
-                <p><strong>Correo:</strong> cristiancasa94@gmail.com</p>
-                <p><strong>Ubicación:</strong> Ecuador - Latacunga - Tanicuchi</p>
-            </div>
-        </section>
-
-        <!-- Educación -->
-        <section>
-            <h2>Educación</h2>
-            <div class="card">
-                <ul class="cv-list">
-                    <li><strong>Universidad Técnica de Cotopaxi</strong> – Ingeniería en Sistemas de la Información (2025 - Actualidad)</li>
-                    <li><strong>Unidad Educativa Marco Aurelio Subía Martínez Batalla de Panupali</strong> – Bachillerato Técnico</li>
-                </ul>
-            </div>
-        </section>
-
-        <!-- Habilidades -->
-        <section>
-            <h2>Habilidades</h2>
-            <div class="card">
-                <ul class="cv-list">
-                    <li>Programación en Python, C#, JavaScript, .NET</li>
-                    <li>Desarrollo web (HTML, CSS, JS)</li>
-                    <li>Bases de datos (MySQL, SQL Server, DBeaver, PostgreSQL, MariaDB)</li>
-                    <li>Git y GitHub</li>
-                    <li>Trabajo en equipo</li>
-                </ul>
-            </div>
-        </section>
-
-        <!-- Experiencia -->
-        <section>
-            <h2>Experiencia</h2>
-            <div class="card">
-                <ul class="cv-list">
-                    <li><strong>Proyecto A:</strong> Sistema de facturación (2024)</li>
-                    <li><strong>Proyecto B:</strong> Aplicación móvil Flutter (2025)</li>
-                    <li><strong>Proyecto C:</strong> Sistema web con Laravel (2025)</li>
-                </ul>
-            </div>
-        </section>
-
-        <!-- Repositorios GitHub -->
-        <section>
-            <h2>Mis Repositorios de GitHub</h2>
-            <div class="card" id="repos-github">
-                <p>Cargando repositorios de GitHub...</p>
-            </div>
-        </section>
-
-        <!-- Repositorios GitLab -->
-        <section>
-            <h2>Mis Repositorios de GitLab</h2>
-            <div class="card">
-                <div class="repo"><a href="https://gitlab.com/gus_05-group/puntosTuristicos" target="_blank">puntosTuristicos</a><p>Sin descripción</p></div>
-                <div class="repo"><a href="https://gitlab.com/gus_05-group/sen" target="_blank">sen</a><p>Sin descripción</p></div>
-                <div class="repo"><a href="https://gitlab.com/gus_05-group/sensoresLot" target="_blank">sensoresLot</a><p>Sin descripción</p></div>
-                <div class="repo"><a href="https://gitlab.com/gus_05-group/tiendaPedido" target="_blank">tiendaPedido</a><p>Sin descripción</p></div>
-                <div class="repo"><a href="https://gitlab.com/gus_05-group/tiendaPedidos" target="_blank">tiendaPedidos</a><p>Sin descripción</p></div>
-                <div class="repo"><a href="https://gitlab.com/gus_05-group/trabajosCQ1" target="_blank">trabajosCQ1</a><p>Sin descripción</p></div>
-                <div class="repo"><a href="https://gitlab.com/gus_05-group/turismo" target="_blank">turismo</a><p>Sin descripción</p></div>
-                <div class="repo"><a href="https://gitlab.com/gus_05-group/turismos" target="_blank">turismos</a><p>Sin descripción</p></div>
-            </div>
-        </section>
-
-    </div>
-
-    <footer>
-        © 2025 - Mi GitPage
-    </footer>
-
-    <!-- Script para mostrar repos de GitHub -->
-    <script>
-        const githubUser = "gustavo-478";
-
-        fetch(`https://api.github.com/users/${githubUser}/repos`)
-            .then(response => response.json())
-            .then(repos => {
-                const container = document.getElementById("repos-github");
-                container.innerHTML = "";
-                repos.forEach(repo => {
-                    container.innerHTML += `
-                        <div class="repo">
-                            <a href="${repo.html_url}" target="_blank">${repo.name}</a>
-                            <p>${repo.description || "Sin descripción"}</p>
-                        </div>
-                    `;
-                });
-            })
-            .catch(error => {
-                document.getElementById("repos-github").innerHTML = "Error cargando repos de GitHub.";
-            });
-    </script>
+          `;
+        });
+      })
+      .catch(error => {
+        document.getElementById("repos-github").innerHTML = "Error cargando repos de GitHub.";
+      });
+  </script>
 
 </body>
 </html>
