@@ -101,7 +101,7 @@
 
     <div class="container">
 
-        <!-- Secciones de CV -->
+        <!-- Sobre mí -->
         <section>
             <h2>Sobre mí</h2>
             <div class="card">
@@ -110,6 +110,7 @@
             </div>
         </section>
 
+        <!-- Información Personal -->
         <section>
             <h2>Información Personal</h2>
             <div class="card cv-section">
@@ -120,6 +121,7 @@
             </div>
         </section>
 
+        <!-- Educación -->
         <section>
             <h2>Educación</h2>
             <div class="card">
@@ -130,6 +132,7 @@
             </div>
         </section>
 
+        <!-- Habilidades -->
         <section>
             <h2>Habilidades</h2>
             <div class="card">
@@ -143,6 +146,7 @@
             </div>
         </section>
 
+        <!-- Experiencia -->
         <section>
             <h2>Experiencia</h2>
             <div class="card">
@@ -165,8 +169,15 @@
         <!-- Repositorios GitLab -->
         <section>
             <h2>Mis Repositorios de GitLab</h2>
-            <div class="card" id="repos-gitlab">
-                <p>Cargando repositorios de GitLab...</p>
+            <div class="card">
+                <div class="repo"><a href="https://gitlab.com/gus_05-group/puntosTuristicos" target="_blank">puntosTuristicos</a><p>Sin descripción</p></div>
+                <div class="repo"><a href="https://gitlab.com/gus_05-group/sen" target="_blank">sen</a><p>Sin descripción</p></div>
+                <div class="repo"><a href="https://gitlab.com/gus_05-group/sensoresLot" target="_blank">sensoresLot</a><p>Sin descripción</p></div>
+                <div class="repo"><a href="https://gitlab.com/gus_05-group/tiendaPedido" target="_blank">tiendaPedido</a><p>Sin descripción</p></div>
+                <div class="repo"><a href="https://gitlab.com/gus_05-group/tiendaPedidos" target="_blank">tiendaPedidos</a><p>Sin descripción</p></div>
+                <div class="repo"><a href="https://gitlab.com/gus_05-group/trabajosCQ1" target="_blank">trabajosCQ1</a><p>Sin descripción</p></div>
+                <div class="repo"><a href="https://gitlab.com/gus_05-group/turismo" target="_blank">turismo</a><p>Sin descripción</p></div>
+                <div class="repo"><a href="https://gitlab.com/gus_05-group/turismos" target="_blank">turismos</a><p>Sin descripción</p></div>
             </div>
         </section>
 
@@ -176,12 +187,10 @@
         © 2025 - Mi GitPage
     </footer>
 
-    <!-- Script para mostrar repos -->
+    <!-- Script para mostrar repos de GitHub -->
     <script>
         const githubUser = "gustavo-478";
-        const gitlabUser = "gus_05";
 
-        // GitHub
         fetch(`https://api.github.com/users/${githubUser}/repos`)
             .then(response => response.json())
             .then(repos => {
@@ -198,25 +207,6 @@
             })
             .catch(error => {
                 document.getElementById("repos-github").innerHTML = "Error cargando repos de GitHub.";
-            });
-
-        // GitLab
-        fetch(`https://gitlab.com/api/v4/users/${gitlabUser}/projects`)
-            .then(response => response.json())
-            .then(projects => {
-                const container = document.getElementById("repos-gitlab");
-                container.innerHTML = "";
-                projects.forEach(project => {
-                    container.innerHTML += `
-                        <div class="repo">
-                            <a href="${project.web_url}" target="_blank">${project.name}</a>
-                            <p>${project.description || "Sin descripción"}</p>
-                        </div>
-                    `;
-                });
-            })
-            .catch(error => {
-                document.getElementById("repos-gitlab").innerHTML = "Error cargando repos de GitLab.";
             });
     </script>
 
